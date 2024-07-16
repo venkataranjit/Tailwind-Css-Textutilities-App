@@ -18,8 +18,8 @@ const TextForm2 = (props) => {
     props.showAlert("Cleared", "Success");
   };
   const copyHandler = () => {
-    settextArea(textArea);                                       //  in react
-    let copyText = navigator.clipboard.writeText(textArea);      //  in react
+    // settextArea(textArea);                                       //  in react
+    navigator.clipboard.writeText(textArea);      //  in react
     // let copy = document.getElementsByTagName("textarea")[0]; //  in javascript
     // copy.select(); //  in javascript
     // navigator.clipboard.writeText(copy.value); //  in javascript

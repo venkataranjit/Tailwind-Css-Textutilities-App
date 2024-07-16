@@ -17,7 +17,7 @@ function App() {
     });
     setTimeout(() => {
       setAlert(null);
-    }, 3000);
+    }, 30000);
   };
 
   // const toggleMode = () => {
@@ -56,13 +56,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="Tailwind-Css-Textutilities-App"
             element={
               <TextForm message="Enter Any Text" showAlert={showAlert} />
             }
           />
           <Route
-            path="/form2"
+            path="Tailwind-Css-Textutilities-App/form2"
             element={
               <TextForm2 message="Enter Any Text" showAlert={showAlert} />
             }

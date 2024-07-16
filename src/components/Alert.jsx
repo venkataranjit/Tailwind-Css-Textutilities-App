@@ -5,7 +5,7 @@ const Alert = (props) => {
     <>
       <div className="h-10">
         {props.alert && (
-          <div class="container mx-auto space-y-5">
+          <div className="container mx-auto space-y-5">
             <div
               className={`flex justify-between text-${
                 props.alert.type === "Failed" ? "red" : "green"
@@ -18,7 +18,7 @@ const Alert = (props) => {
                 {props.alert.message}
               </p>
             </div>
-            
+            <div className="bg-red-200 bg-green-200 text-red-700 text-green-700" style={{display:'none'}}></div>
           </div>
         )}
       </div>
