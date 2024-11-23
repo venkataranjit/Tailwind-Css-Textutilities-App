@@ -33,10 +33,10 @@ const TextForm = (props) => {
     if (textArea.trim().length > 0) {
       // settextArea(textArea);                                       //  in react
       // let copyText = navigator.clipboard.writeText(textArea);      //  in react
-      let copy = document.getElementsByTagName("textarea")[0]; //  in javascript
-      copy.select(); //  in javascript
-      navigator.clipboard.writeText(copy.value); //  in javascript
-      document.getSelection().removeAllRanges();
+      // let copy = document.getElementsByTagName("textarea")[0]; //  in javascript
+      // copy.select(); //  in javascript
+      navigator.clipboard.writeText(textArea); //  in javascript
+      // document.getSelection().removeAllRanges();
       props.showAlert(
         "Your Text is Copied, Paste it Where ever You Want",
         "Success"

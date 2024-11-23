@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import TextForm from "./components/TextForm";
-import TextForm2 from "./components/TextForm2";
 import Alert from "./components/Alert";
 
 function App() {
@@ -17,7 +15,7 @@ function App() {
     });
     setTimeout(() => {
       setAlert(null);
-    }, 30000);
+    }, 3000);
   };
 
   // const toggleMode = () => {
@@ -44,32 +42,17 @@ function App() {
   useEffect(() => {
     if (mode === "light") {
       document.body.style.filter = "grayscale(0%)";
-    } else {
+      } else {
       document.body.style.filter = "grayscale(100%)";
+     
     }
-  }, [mode]);
+  }, [mode]); 
 
   return (
     <>
       <NavBar mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="Tailwind-Css-Textutilities-App"
-            element={
-              <TextForm message="Enter Any Text" showAlert={showAlert} />
-            }
-          />
-          <Route
-            path="Tailwind-Css-Textutilities-App/form2"
-            element={
-              <TextForm2 message="Enter Any Text" showAlert={showAlert} />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-      
+      <TextForm message="Enter Any Text" showAlert = {showAlert}/>
     </>
   );
 }
