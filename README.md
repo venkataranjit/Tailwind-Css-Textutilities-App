@@ -37,7 +37,7 @@
 4. **Run the application**:
 
    ```bash
-   npm run dev
+   npm run start
    ```
 
 5. **Open the application**:
